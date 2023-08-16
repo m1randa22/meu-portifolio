@@ -1,0 +1,225 @@
+/*A unidade de medida "rem" foi utilizada no código para ter acessibilidade*/
+
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:wght@400;600&display=swap');
+
+:root { /*cores definidas para quando acontecer uma atualização, poder modificar aqui.
+    Isto é uma variável declarada, que se usa no escopo: background-color: var(--cor-primaria);*/
+    --cor-primaria: #000000;
+    --cor-secundaria: #f6f6f6f6;
+    --cor-terciaria: #22d4fd;
+    --cor-hover: #1d95c127;
+
+    --fonte-primaria: 'Krona One', sans-serif;
+    --fonte-secundaria: 'Montserrat', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    box-sizing: border-box;
+    /* height: 100vh; - comentado para os elementos (footer, header) se encaixarem no body*/
+    background-color: var(--cor-primaria);
+    color: var(--cor-secundaria);
+}
+
+.cabecalho {
+    padding: 2% 0% 0% 15%;
+}
+
+.cabecalho__inicio {
+    display: flex;
+    gap: 80px;
+}
+
+.cabecalho__inicio__link {
+    font-size: 1.5rem;
+    font-family: var(--fonte-secundaria);
+    font-weight: 600;
+    color: var(--cor-terciaria);
+    text-decoration: none;
+}
+
+.cabecalho__inicio__link:hover {
+    transform: scale(1.05);
+}
+/*-----------------------------------------------------------------------------------------------------------------------------------------------------*/
+.apresentacao {
+    padding: 5% 15%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2px;
+}
+
+.apresentacao__about {
+    padding: 5% 15%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2px;
+}
+
+.apresentacao__cur {
+    padding: 5% 15%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2px;
+}
+
+.apresentacao__conteudo {
+    width: 615px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.apresentacao__conteudo__about {
+    width: 615px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.apresentacao__conteudo__cur {
+    width: 615px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.titulo__principal {
+    font-size: 2.5rem;
+    font-family: var(--fonte-primaria);
+}
+
+.titulo__principal__about {
+    font-size: 2.25rem;
+    font-family: var(--fonte-primaria);
+}
+
+.titulo__principal__cur {
+    font-size: 2.25rem;
+    font-family: var(--fonte-primaria);
+}
+
+.h1title {
+    font-weight: bold;
+    color: var(--cor-terciaria);
+}
+
+h1 {
+    font-weight: bold;
+}
+
+.subtitulo__principal {
+    font-size: 1.25rem;
+    font-family: var(--fonte-secundaria);
+    font-weight: 400;
+}
+
+.subtitulo__principal__about {
+    font-size: 1.25rem;
+    font-family: var(--fonte-secundaria);
+    font-weight: 400;
+}
+
+.subtitulo__principal__cur {
+    font-size: 1.25rem;
+    font-family: var(--fonte-secundaria);
+    font-weight: 400;
+}
+
+.grupos__li {
+    font-size: 1.25rem;
+    font-family: var(--fonte-secundaria);
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+.subtitulo__links {
+    font-family: var(--fonte-primaria);
+    font-weight: 400;
+    font-size: 1.5rem;
+}
+
+.links__principal { /*container dos links do index.html*/
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 32px;
+}
+
+.links__link { /*botões de direcionamento (links index.html)*/
+    border: 2px solid var(--cor-terciaria);
+    padding: 21px 0;
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    width: 378px;
+    font-size: 1.5rem;
+    text-align: center;
+    border-radius: 8px;
+    text-decoration: none;
+    color: var(--cor-secundaria);
+    font-family: var(--fonte-secundaria);
+    font-weight: 600;
+}
+
+.links__link:hover { /*Tudo o que tem neste bloco, é estilizado para o hover (estilização dos links do index.html*/
+    background-color: var(--cor-hover);
+    transition: background-color 0.4s ease;
+    transform: scale(1.05);
+}
+/*----------------------------------------------------------------------------------------------------------------------------------------------------------*/
+.rodape {
+    background-color: var(--cor-terciaria);
+    color: var(--cor-primaria);
+    font-family: var(--fonte-secundaria);
+    font-weight: 400;
+    font-size: 1.06rem;
+    text-align: center;
+    padding: 5px;
+}
+
+@media (min-width: 480px) and (max-width: 1200px) { /*Este @media serve para declararmos o tamanho mínimo (mobile) e máximo de tela (desktop) - Dentro, está a tag pai e seus ajustes*/
+    
+    .cabecalho {
+        padding: 10%;
+    }
+
+    .cabecalho__inicio {
+        justify-content: center;
+    }
+    
+    .apresentacao {
+        flex-direction: column-reverse;
+        padding: 5%;
+    }
+
+    .apresentacao__about {
+        flex-direction: column-reverse;
+        padding: 5%;
+    }
+
+    .apresentacao__cur {
+        flex-direction: column-reverse;
+        padding: 5%;
+    }
+
+    .apresentacao__conteudo {
+        width: auto; /*O "auto" fará com que o conteúdo de dentro respeite o pai (apresentação)*/
+    }
+
+    .apresentacao__conteudo__about {
+        width: auto;
+    }
+
+    .apresentacao__conteudo__cur {
+        width: auto;
+    }
+}
